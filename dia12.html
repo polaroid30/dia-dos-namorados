@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dia dos Namorados</title>
+  <link rel="stylesheet" href="dia12.css" />
+</head>
+<body>
+
+  <!-- 🎥 Vídeo de fundo -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="hellokitty.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <main>
+    <h1>FELIZ DIA DOS NAMORADOS</h1>
+
+    <div class="player-wrapper">
+      <iframe 
+        src="https://open.spotify.com/embed/track/4bDPr2VAjcfgUDmN9dGOC3?utm_source=generator" 
+        width="100%" 
+        height="152" 
+        frameborder="0" 
+        allowtransparency="true" 
+        allow="encrypted-media">
+      </iframe>
+    </div>
+
+    <div class="alinhados">
+      <img src="imagem1.jpg" alt="fotocasal1">
+      <img src="imagem2.jpg" alt="fotocasal2">
+      <video src="video.mp4" controls></video>
+      <img src="imagem3.jpg" alt="fotocasal3">
+      <img src="imagem4.jpg" alt="fotocasal4">
+    </div>
+
+    <h2>UMA CARTA PARA AMANDA SILVA</h2>
+       <h2 id="contador"></h2>
+
+<script>
+  // Começou dia 11 de janeiro de 2025 às 00:00
+  const dataInicio = new Date("2025-01-11T00:00:00");
+
+  function atualizarContador() {
+    const agora = new Date();
+    let diff = agora - dataInicio; // diferença em milissegundos
+
+    const segundos = Math.floor(diff / 1000);
+    const minutos = Math.floor(segundos / 60);
+    const horas = Math.floor(minutos / 60);
+    const dias = Math.floor(horas / 24);
+    const meses = Math.floor(dias / 30); // mês aproximado
+
+    const diasRestantes = dias % 30;
+    const horasRestantes = horas % 24;
+    const minutosRestantes = minutos % 60;
+    const segundosRestantes = segundos % 60;
+
+    document.getElementById("contador").textContent =
+      `Eu te amo desde: ${meses} meses, ${diasRestantes} dias, ${horasRestantes} horas, ${minutosRestantes} minutos e ${segundosRestantes} segundos 💖`;
+  }
+
+  setInterval(atualizarContador, 1000);
+  atualizarContador();
+</script>
+<section class="carta">
+  <p>
+    Amor,<br><br>
+    Passamos por tantas coisas, e ainda vamos passar por muito mais! Mesmo que venham momentos ruins ou bons, a sua companhia é o que mais importa. Tenho sentido constantemente um amor indescritível por você e pelo seu doce jeito de ser.<br><br>
+    Os dias <strong>11/01</strong> e <strong>12/06</strong> estarão para sempre marcados na nossa história — pela nossa persistência, pelo nosso carinho e pelo que estamos construindo juntos. Agradeço por acreditar em mim e em toda a minha disposição em estar ao seu lado, todos os dias da minha vida. ❤️<br><br>
+    <em>Com amor, muito cuidado e carinho,</em><br><br>
+    — Matheus Augusto (ou Polaroid)
+  </p>
+</section>
+
+    
+  </main>
+</body>
+</html>
